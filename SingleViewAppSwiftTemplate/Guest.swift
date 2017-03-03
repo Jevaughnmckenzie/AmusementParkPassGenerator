@@ -66,7 +66,28 @@ class Guest: Accessible, Discountable {
     var merchandiseDiscount: Float? = nil
 }
 
+class Classic: Guest {}
 
+class VIP: Guest {
+    
+    override init() {
+        super.init()
+        canSkipRideLines = true
+        
+        foodDiscount =  0.10
+        merchandiseDiscount = 0.20
+    }
+}
+
+class Child: Guest, VerifiableByBirthday {
+    
+    var birthday: Date
+    
+    init(bornOn birthday: Date) {
+        self.birthday = birthday
+    }
+    
+}
 
 
 
