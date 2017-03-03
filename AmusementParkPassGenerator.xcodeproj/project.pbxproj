@@ -35,17 +35,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3A8AADC51DF9B85E00A2B931 /* SingleViewAppSwiftTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SingleViewAppSwiftTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8AADC51DF9B85E00A2B931 /* AmusementParkPassGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmusementParkPassGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8AADCD1DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8AADD21DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3A8AADD41DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A8AADD91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppSwiftTemplateTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8AADD91DF9B85E00A2B931 /* AmusementParkPassGeneratorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADDD1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateTests.swift; sourceTree = "<group>"; };
 		3A8AADDF1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A8AADE41DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SingleViewAppSwiftTemplateUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8AADE41DF9B85E00A2B931 /* AmusementParkPassGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateUITests.swift; sourceTree = "<group>"; };
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A84B7AC01E69ED04009CB2BD /* Guest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Guest.swift; sourceTree = "<group>"; };
@@ -89,9 +89,9 @@
 		3A8AADC61DF9B85E00A2B931 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3A8AADC51DF9B85E00A2B931 /* SingleViewAppSwiftTemplate.app */,
-				3A8AADD91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.xctest */,
-				3A8AADE41DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.xctest */,
+				3A8AADC51DF9B85E00A2B931 /* AmusementParkPassGenerator.app */,
+				3A8AADD91DF9B85E00A2B931 /* AmusementParkPassGeneratorTests.xctest */,
+				3A8AADE41DF9B85E00A2B931 /* AmusementParkPassGeneratorUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,9 +131,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3A8AADC41DF9B85E00A2B931 /* SingleViewAppSwiftTemplate */ = {
+		3A8AADC41DF9B85E00A2B931 /* AmusementParkPassGenerator */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8AADED1DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplate" */;
+			buildConfigurationList = 3A8AADED1DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "AmusementParkPassGenerator" */;
 			buildPhases = (
 				3A8AADC11DF9B85E00A2B931 /* Sources */,
 				3A8AADC21DF9B85E00A2B931 /* Frameworks */,
@@ -143,14 +143,14 @@
 			);
 			dependencies = (
 			);
-			name = SingleViewAppSwiftTemplate;
+			name = AmusementParkPassGenerator;
 			productName = SingleViewAppSwiftTemplate;
-			productReference = 3A8AADC51DF9B85E00A2B931 /* SingleViewAppSwiftTemplate.app */;
+			productReference = 3A8AADC51DF9B85E00A2B931 /* AmusementParkPassGenerator.app */;
 			productType = "com.apple.product-type.application";
 		};
-		3A8AADD81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests */ = {
+		3A8AADD81DF9B85E00A2B931 /* AmusementParkPassGeneratorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8AADF01DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplateTests" */;
+			buildConfigurationList = 3A8AADF01DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "AmusementParkPassGeneratorTests" */;
 			buildPhases = (
 				3A8AADD51DF9B85E00A2B931 /* Sources */,
 				3A8AADD61DF9B85E00A2B931 /* Frameworks */,
@@ -161,14 +161,14 @@
 			dependencies = (
 				3A8AADDB1DF9B85E00A2B931 /* PBXTargetDependency */,
 			);
-			name = SingleViewAppSwiftTemplateTests;
+			name = AmusementParkPassGeneratorTests;
 			productName = SingleViewAppSwiftTemplateTests;
-			productReference = 3A8AADD91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.xctest */;
+			productReference = 3A8AADD91DF9B85E00A2B931 /* AmusementParkPassGeneratorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		3A8AADE31DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests */ = {
+		3A8AADE31DF9B85E00A2B931 /* AmusementParkPassGeneratorUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3A8AADF31DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplateUITests" */;
+			buildConfigurationList = 3A8AADF31DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "AmusementParkPassGeneratorUITests" */;
 			buildPhases = (
 				3A8AADE01DF9B85E00A2B931 /* Sources */,
 				3A8AADE11DF9B85E00A2B931 /* Frameworks */,
@@ -179,9 +179,9 @@
 			dependencies = (
 				3A8AADE61DF9B85E00A2B931 /* PBXTargetDependency */,
 			);
-			name = SingleViewAppSwiftTemplateUITests;
+			name = AmusementParkPassGeneratorUITests;
 			productName = SingleViewAppSwiftTemplateUITests;
-			productReference = 3A8AADE41DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.xctest */;
+			productReference = 3A8AADE41DF9B85E00A2B931 /* AmusementParkPassGeneratorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -210,7 +210,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "SingleViewAppSwiftTemplate" */;
+			buildConfigurationList = 3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "AmusementParkPassGenerator" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -223,9 +223,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				3A8AADC41DF9B85E00A2B931 /* SingleViewAppSwiftTemplate */,
-				3A8AADD81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests */,
-				3A8AADE31DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests */,
+				3A8AADC41DF9B85E00A2B931 /* AmusementParkPassGenerator */,
+				3A8AADD81DF9B85E00A2B931 /* AmusementParkPassGeneratorTests */,
+				3A8AADE31DF9B85E00A2B931 /* AmusementParkPassGeneratorUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,12 +289,12 @@
 /* Begin PBXTargetDependency section */
 		3A8AADDB1DF9B85E00A2B931 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A8AADC41DF9B85E00A2B931 /* SingleViewAppSwiftTemplate */;
+			target = 3A8AADC41DF9B85E00A2B931 /* AmusementParkPassGenerator */;
 			targetProxy = 3A8AADDA1DF9B85E00A2B931 /* PBXContainerItemProxy */;
 		};
 		3A8AADE61DF9B85E00A2B931 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 3A8AADC41DF9B85E00A2B931 /* SingleViewAppSwiftTemplate */;
+			target = 3A8AADC41DF9B85E00A2B931 /* AmusementParkPassGenerator */;
 			targetProxy = 3A8AADE51DF9B85E00A2B931 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -444,7 +444,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwiftTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleViewAppSwiftTemplate.app/SingleViewAppSwiftTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmusementParkPassGenerator.app/AmusementParkPassGenerator";
 			};
 			name = Debug;
 		};
@@ -458,7 +458,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teamtreehouse.SingleViewAppSwiftTemplateTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SingleViewAppSwiftTemplate.app/SingleViewAppSwiftTemplate";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AmusementParkPassGenerator.app/AmusementParkPassGenerator";
 			};
 			name = Release;
 		};
@@ -491,7 +491,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "SingleViewAppSwiftTemplate" */ = {
+		3A8AADC01DF9B85E00A2B931 /* Build configuration list for PBXProject "AmusementParkPassGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8AADEB1DF9B85E00A2B931 /* Debug */,
@@ -500,7 +500,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A8AADED1DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplate" */ = {
+		3A8AADED1DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "AmusementParkPassGenerator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8AADEE1DF9B85E00A2B931 /* Debug */,
@@ -509,7 +509,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A8AADF01DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplateTests" */ = {
+		3A8AADF01DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "AmusementParkPassGeneratorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8AADF11DF9B85E00A2B931 /* Debug */,
@@ -518,7 +518,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3A8AADF31DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "SingleViewAppSwiftTemplateUITests" */ = {
+		3A8AADF31DF9B85E00A2B931 /* Build configuration list for PBXNativeTarget "AmusementParkPassGeneratorUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3A8AADF41DF9B85E00A2B931 /* Debug */,
