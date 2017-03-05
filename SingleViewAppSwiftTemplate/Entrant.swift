@@ -28,17 +28,41 @@ protocol FrequentVisitor: VerifiableByName, VerifiableByAddress {
     
 }
 
+protocol VerifiableByBirthday {
+    var birthday: Date? { get }
+    var calendar: Calendar { get }
+    func checkBirthday() throws
+}
 
 
-class Employee: Accessible, Discountable, FrequentVisitor {
-    var firstName: String?
-    var lastName: String?
+protocol Discountable {
+    var foodDiscount: Float? { get set }
+    var merchandiseDiscount: Float? { get set }
+}
+
+protocol AreaAccessible {
+    var canEnterAmusementAreas: Bool { get set }
+    var canEnterKitchenAreas: Bool { get set }
+    var canEnterRideControlAreas: Bool { get set }
+    var canEnterMaintenanceAreas: Bool { get set }
+    var canEnterOfficeArea: Bool { get set }
     
-    var streetAddress: String?
-    var city: String?
-    var state: String?
-    var zipcode: String?
+    func checkIfIndividual(_: Bool)
+}
+
+
+protocol RideAccessible {
+    var canAccessAllRides: Bool { get set }
+    var canSkipRideLines: Bool { get set }
     
+}
+
+protocol Accessible: AreaAccessible, RideAccessible {
+    
+}
+
+
+class Entrant: Accessible, Discountable {
     var canEnterAmusementAreas: Bool = true
     var canEnterKitchenAreas: Bool = false
     var canEnterRideControlAreas: Bool = false
@@ -48,8 +72,67 @@ class Employee: Accessible, Discountable, FrequentVisitor {
     var canAccessAllRides: Bool = true
     var canSkipRideLines: Bool = false
     
-    var foodDiscount: Float? = 0.15
-    var merchandiseDiscount: Float? = 0.25
+    var foodDiscount: Float? = nil
+    var merchandiseDiscount: Float? = nil
+    
+    func checkIfIndividual(_ canAccess: Bool)  {
+        guard canAccess == true else {
+            return print("Individual is not authorized to enter")
+        }
+    }
+}
+
+
+class RegularGuest: Entrant {}
+
+class VIP: Entrant {
+    
+    override init() {
+        super.init()
+        canSkipRideLines = true
+        
+        foodDiscount =  0.10
+        merchandiseDiscount = 0.20
+    }
+}
+
+class Child: Entrant, VerifiableByBirthday {
+    
+    var birthday: Date?
+    let calendar: Calendar = Calendar.current
+    
+    init(bornOn birthday: Date?) {
+        self.birthday = birthday
+    }
+    
+    func checkBirthday() throws {
+        
+        let earliestValidBirthday =  calendar.date(byAdding: .year, value: -5, to: Date())!
+        
+        guard birthday != nil else {
+            throw InfoError.missingInformation(inObject: self, description: "A valid date of birth must be entered.")
+        }
+        
+        guard birthday! > Date() else {
+            throw InfoError.invalidBirthday(inObject: self, description: "Appeareantly, this child has not been born yet.")
+        }
+        
+        guard birthday! >= earliestValidBirthday else {
+            throw InfoError.invalidBirthday(inObject: self, description: "The individual is too old to qualify.")
+        }
+    }
+}
+
+
+
+class Employee: Entrant, FrequentVisitor {
+    var firstName: String?
+    var lastName: String?
+    
+    var streetAddress: String?
+    var city: String?
+    var state: String?
+    var zipcode: String?
     
     init(firstName: String, lastName: String, fullAddress: FullAddress) {
         self.firstName = firstName
@@ -59,6 +142,9 @@ class Employee: Accessible, Discountable, FrequentVisitor {
         self.city = fullAddress.city
         self.state = fullAddress.state
         self.zipcode = fullAddress.zipcode
+        
+        foodDiscount = 0.15
+        merchandiseDiscount = 0.25
     }
     
     
@@ -75,11 +161,12 @@ extension Employee {
         }
     }
     
-    func checkIfIndividual(_ canAccess: Bool) throws {
+    func checkIfIndividual(_ canAccess: Bool) {
         guard canAccess == true else {
-            throw InfoError.unauthorizedAccess(inObject: self, description: "Individual is not authorized to enter")
+           return print("Individual is not authorized to enter")
         }
     }
+    
     
     func checkAddress() throws {
         guard streetAddress != nil else {
@@ -139,6 +226,7 @@ class Manager: Employee {
         foodDiscount = 0.25
     }
 }
+
 
 
 
