@@ -57,12 +57,34 @@ protocol RideAccessible {
     
 }
 
-protocol Accessible: AreaAccessible, RideAccessible {
+protocol AccessCheckable: AreaAccessible, RideAccessible {
     
 }
 
+protocol Accessible {
+}
 
-class Entrant: Accessible, Discountable {
+enum Access {
+    case amusement
+    case kitchen
+    case rideControl
+    case maintenance
+    case office
+    
+    case allRidesAccess
+    case skipPrivilage
+    
+}
+
+enum RideAccess: Accessible {
+    
+}
+
+class Entrant: AccessCheckable, Discountable, VerifiableByBirthday {
+    var birthday: Date?
+    let calendar: Calendar = Calendar.current
+    
+    
     var canEnterAmusementAreas: Bool = true
     var canEnterKitchenAreas: Bool = false
     var canEnterRideControlAreas: Bool = false
@@ -80,6 +102,9 @@ class Entrant: Accessible, Discountable {
             return print("Individual is not authorized to enter")
         }
     }
+    
+    func checkBirthday() throws {
+    }
 }
 
 
@@ -96,10 +121,9 @@ class VIP: Entrant {
     }
 }
 
-class Child: Entrant, VerifiableByBirthday {
+class Child: Entrant {
     
-    var birthday: Date?
-    let calendar: Calendar = Calendar.current
+    
     
     init(bornOn birthday: Date?) {
         self.birthday = birthday
