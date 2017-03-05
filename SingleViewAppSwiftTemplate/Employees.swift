@@ -9,43 +9,35 @@
 import Foundation
 
 protocol VerifiableByName {
-    var firstName: String { get }
-    var lastName: String { get }
+    var firstName: String? { get }
+    var lastName: String? { get }
+    
+    func checkName() throws
 }
 
 protocol VerifiableByAddress {
-    var streetAddress: String { get set }
-    var city: String { get set }
-    var state: String { get set }
-    var zipcode: String { get set }
+    var streetAddress: String? { get set }
+    var city: String? { get set }
+    var state: String? { get set }
+    var zipcode: String? { get set }
+    
+    func checkAddress() throws
 }
 
 protocol FrequentVisitor: VerifiableByName, VerifiableByAddress {
     
 }
 
-struct FullAddress: VerifiableByAddress {
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipcode: String
-    
-    init(streetAddress: String, city: String, state: String, zipcode: String) {
-        self.streetAddress = streetAddress
-        self.city = city
-        self.state = state
-        self.zipcode = zipcode
-    }
-}
+
 
 class Employee: Accessible, Discountable, FrequentVisitor {
-    var firstName: String
-    var lastName: String
+    var firstName: String?
+    var lastName: String?
     
-    var streetAddress: String
-    var city: String
-    var state: String
-    var zipcode: String
+    var streetAddress: String?
+    var city: String?
+    var state: String?
+    var zipcode: String?
     
     var canEnterAmusementAreas: Bool = true
     var canEnterKitchenAreas: Bool = false
@@ -68,6 +60,44 @@ class Employee: Accessible, Discountable, FrequentVisitor {
         self.state = fullAddress.state
         self.zipcode = fullAddress.zipcode
     }
+    
+    
+}
+
+extension Employee {
+    
+    func checkName() throws {
+        guard firstName != nil else {
+            throw InfoError.missingInformation(inObject: self as AnyObject, description: "Please fill out First Name field.")
+        }
+        guard lastName != nil else {
+            throw InfoError.missingInformation(inObject: self as AnyObject, description: "Please fill out Last Name field.")
+        }
+    }
+    
+    func checkIfIndividual(_ canAccess: Bool) throws {
+        guard canAccess == true else {
+            throw InfoError.unauthorizedAccess(inObject: self, description: "Individual is not authorized to enter")
+        }
+    }
+    
+    func checkAddress() throws {
+        guard streetAddress != nil else {
+            throw InfoError.missingInformation(inObject: self as AnyObject, description: "Please enter a valid street address.")
+        }
+        
+        guard city != nil else {
+            throw InfoError.missingInformation(inObject: self as AnyObject, description: "Please enter a valid city.")
+        }
+        
+        guard state != nil else {
+            throw InfoError.missingInformation(inObject: self as AnyObject, description: "Please enter a valid state.")
+        }
+        
+        guard zipcode != nil, zipcode?.characters.count == 5, Int.init(zipcode!) != nil  else {
+            throw InfoError.missingInformation(inObject: self as AnyObject, description: "Please enter a valid zipcode.")
+        }
+    }
 }
 
 class FoodServiceWorker: Employee {
@@ -87,7 +117,7 @@ class RideServiceWorker: Employee {
     }
 }
 
-class Maintenance: Employee {
+class MaintenanceWorker: Employee {
     override init(firstName: String, lastName: String, fullAddress: FullAddress) {
         super.init(firstName: firstName, lastName: lastName, fullAddress: fullAddress)
         
