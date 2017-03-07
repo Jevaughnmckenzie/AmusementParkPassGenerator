@@ -40,45 +40,33 @@ protocol Discountable {
     var merchandiseDiscount: Float? { get set }
 }
 
-protocol AreaAccessible {
-    var canEnterAmusementAreas: Bool { get set }
-    var canEnterKitchenAreas: Bool { get set }
-    var canEnterRideControlAreas: Bool { get set }
-    var canEnterMaintenanceAreas: Bool { get set }
-    var canEnterOfficeArea: Bool { get set }
-    
-    func checkIfIndividual(_: Bool)
-}
 
-
-protocol RideAccessible {
-    var canAccessAllRides: Bool { get set }
-    var canSkipRideLines: Bool { get set }
-    
-}
-
-protocol AccessCheckable: AreaAccessible, RideAccessible {
-    
-}
 
 protocol Accessible {
 }
 
-enum Access {
-    case amusement
-    case kitchen
-    case rideControl
-    case maintenance
-    case office
-    
-    case allRidesAccess
-    case skipPrivilage
-    
+// Makes the swipe method more flexible
+protocol EntrantGroup {}
+
+enum EntrantType {
+    case guest(GuestType)
+    case employee(EmployeeType)
 }
 
-enum RideAccess: Accessible {
-    
+enum GuestType: EntrantGroup {
+    case regularGuest(Entrant)
+    case vip(VIP)
+    case child(Child)
 }
+
+enum EmployeeType: EntrantGroup {
+    case foodService(FoodServiceWorker)
+    case rideService(RideServiceWorker)
+    case maintenance(MaintenanceWorker)
+    case manager(Manager)
+}
+
+
 
 class Entrant: AccessCheckable, Discountable, VerifiableByBirthday {
     var birthday: Date?
@@ -104,7 +92,11 @@ class Entrant: AccessCheckable, Discountable, VerifiableByBirthday {
     }
     
     func checkBirthday() throws {
+        print("No birthday information on file.")
     }
+    
+    
+    
 }
 
 
@@ -129,7 +121,7 @@ class Child: Entrant {
         self.birthday = birthday
     }
     
-    func checkBirthday() throws {
+    override func checkBirthday() throws {
         
         let earliestValidBirthday =  calendar.date(byAdding: .year, value: -5, to: Date())!
         

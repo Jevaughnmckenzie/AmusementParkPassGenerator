@@ -14,6 +14,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        let isAuthorized = AuthorizationSwipe(entrant: <#T##EntrantType#>)
+        
+        let worker = FoodServiceWorker(firstName: "Jevaughn",
+                                       lastName: "McKenzie",
+                                       fullAddress: FullAddress(streetAddress: "81 Linden St.",
+                                                                city: "Malverne",
+                                                                state: "NY",
+                                                                zipcode: "11565"))
+        
+        let entrant = EntrantType.employee(EmployeeType.foodService(worker))
+        
+        let name = entrant.firstName
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -21,61 +34,10 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    func swipe(for entrant: Entrant, accessTo: Access) {
-        
-        switch accessTo {
-        case .amusement :
-            if entrant.canEnterAmusementAreas == true {
-                print("Access Granted")
-            } else {
-                print("Access Denied")
-            }
-        case .kitchen:
-            if entrant.canEnterKitchenAreas == true {
-                print("Access Granted")
-            } else {
-                print("Access Denied")
-            }
-        case .rideControl:
-            if entrant.canEnterRideControlAreas == true {
-                print("Access Granted")
-            } else {
-                print("Access Denied")
-            }
-        case .maintenance:
-            if entrant.canEnterMaintenanceAreas == true {
-                print("Access Granted")
-            } else {
-                print("Access Denied")
-            }
-        case .office:
-            if entrant.canEnterOfficeArea == true {
-                print("Access Granted")
-            } else {
-                print("Access Denied")
-            }
-        case .allRidesAccess:
-            if entrant.canAccessAllRides == true {
-                print("Approved")
-            } else {
-                print("Denied")
-            }
-        case .skipPrivilage:
-            if entrant.canSkipRideLines == true {
-                print("Please proceed to the front of the line.")
-            } else {
-                print("Please proceed to the end of the line.")
-            }
-        }
+            
         
         
         
-        if let birthdayCheck = entrant.birthday,
-            entrant.calendar.compare(birthdayCheck,
-                                     to: Date(),
-                                     toGranularity: .day) == .orderedSame {
-            print("Happy Birthday!")
-        }
         
         
         
