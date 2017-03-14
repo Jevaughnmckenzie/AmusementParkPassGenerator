@@ -10,8 +10,8 @@ import Foundation
 
 
 enum InfoError: Error {
-    case missingInformation(inObject: Any, description: String)
-    case invalidBirthday(inObject: Any, description: String)
+    case missingInformation(inObject: String, description: String)
+    case invalidBirthday(inObject: String, description: String)
 }
 
 

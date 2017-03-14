@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -21,31 +20,8 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ser-Hd-YEG">
-                                <rect key="frame" x="164" y="407" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIQ-vv-apo">
-                                <rect key="frame" x="87" y="295" width="201" height="76"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="ser-Hd-YEG" firstAttribute="top" secondItem="IIQ-vv-apo" secondAttribute="bottom" constant="36" id="HKJ-if-dFz"/>
-                            <constraint firstItem="IIQ-vv-apo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="KCd-Oe-Wke"/>
-                            <constraint firstItem="IIQ-vv-apo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LzC-kJ-Y7j"/>
-                            <constraint firstItem="IIQ-vv-apo" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="275" id="PcT-an-7fq"/>
-                            <constraint firstItem="IIQ-vv-apo" firstAttribute="centerX" secondItem="ser-Hd-YEG" secondAttribute="centerX" id="gFD-v4-5rw"/>
-                            <constraint firstItem="IIQ-vv-apo" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="71" id="ggZ-cv-kuc"/>
-                        </constraints>
                     </view>
-                    <connections>
-                        <outlet property="timestamps" destination="IIQ-vv-apo" id="BQY-pI-UNY"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

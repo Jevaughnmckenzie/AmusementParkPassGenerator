@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */; };
-		3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */; };
 		3A8AADCE1DF9B85E00A2B931 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */; };
 		3A8AADD01DF9B85E00A2B931 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */; };
 		3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,7 @@
 		A8409A361E7843080019DEAB /* Enrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A351E7843080019DEAB /* Enrant.swift */; };
 		A8409A381E78431D0019DEAB /* AccessAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A371E78431D0019DEAB /* AccessAreas.swift */; };
 		A8409A3A1E78437E0019DEAB /* InfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A391E78437E0019DEAB /* InfoError.swift */; };
+		A8409A3C1E7845AF0019DEAB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A3B1E7845AF0019DEAB /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +41,6 @@
 /* Begin PBXFileReference section */
 		3A8AADC51DF9B85E00A2B931 /* AmusementParkPassGenerator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmusementParkPassGenerator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		3A8AADCD1DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A8AADD21DF9B85E00A2B931 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -57,6 +56,7 @@
 		A8409A351E7843080019DEAB /* Enrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enrant.swift; sourceTree = "<group>"; };
 		A8409A371E78431D0019DEAB /* AccessAreas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessAreas.swift; sourceTree = "<group>"; };
 		A8409A391E78437E0019DEAB /* InfoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoError.swift; sourceTree = "<group>"; };
+		A8409A3B1E7845AF0019DEAB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				3A8AADC81DF9B85E00A2B931 /* AppDelegate.swift */,
-				3A8AADCA1DF9B85E00A2B931 /* ViewController.swift */,
+				A8409A3B1E7845AF0019DEAB /* ViewController.swift */,
 				3A8AADCC1DF9B85E00A2B931 /* Main.storyboard */,
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
@@ -277,8 +277,8 @@
 				A8409A361E7843080019DEAB /* Enrant.swift in Sources */,
 				A8409A3A1E78437E0019DEAB /* InfoError.swift in Sources */,
 				A8409A381E78431D0019DEAB /* AccessAreas.swift in Sources */,
-				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
 				A8409A341E7842F00019DEAB /* Pass.swift in Sources */,
+				A8409A3C1E7845AF0019DEAB /* ViewController.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
 				A8409A321E7842DA0019DEAB /* Kiosk.swift in Sources */,
 			);

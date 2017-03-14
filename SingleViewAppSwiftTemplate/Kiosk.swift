@@ -15,6 +15,7 @@ protocol Swipeable {
 }
 
 class Kiosk: Swipeable {
+    
     let pass: Pass
     var timeStampHistory = [String]()
     let calendar = Calendar.current
@@ -68,17 +69,16 @@ class Kiosk: Swipeable {
     }
     
     func printBirthdayMessage() {
-        guard calendar.compare((pass.personalInfo?.birthdayDate)!, to: Date(), toGranularity: .day) == .orderedSame else {
-            if pass.personalInfo?.birthdayDate == nil {
-                "No valid birthday information entered."
+        if let birthdayComparison: ComparisonResult? = calendar.compare((pass.personalInfo.birthdayDate)!, to: Date(), toGranularity: .day) {
+            if birthdayComparison == .orderedSame {
+            print("Happy Birthday!")
             }
         }
-        print("Happy Birthday!")
     }
 }
 
 class AreaAccessKiosk: Kiosk {
-    
+    let description = "AreaAccessKiosk"
     var areaBeingAuthorized: AreaAccess
     
     init(for areaBeingAuthorized: AreaAccess, with pass: Pass) {
@@ -107,10 +107,12 @@ class AreaAccessKiosk: Kiosk {
             if catagoricalPermissions == 0 {
                 print("Access Denied")
             }
+            printBirthdayMessage()
+            
         } catch InfoError.missingInformation(let object, let description) {
-            print("Error in \(object): \(description)")
+            print("Error in \(String(describing: object)): \(description)")
         } catch InfoError.invalidBirthday(let object, let description) {
-            print("Invalid birthday set in \(object): \(description)")
+            print("Invalid birthday set in \(String(describing: object)): \(description)")
         } catch {
             print("Uncaught error in pass.getAccesspriveleges()")
         }
@@ -119,9 +121,9 @@ class AreaAccessKiosk: Kiosk {
 }
 
 
-
 class RideAccessKiosk: Kiosk {
     
+    let description = "RideAccessKiosk"
     var rideBeingAuthorized: RideAccess
     
     init(for rideBeingAuthorized: RideAccess, with pass: Pass) {
@@ -152,10 +154,13 @@ class RideAccessKiosk: Kiosk {
                     continue
                 }
             }
+            
+            printBirthdayMessage()
+            
         }  catch InfoError.missingInformation(let object, let description) {
-            print("Error in \(object): \(description)")
+            print("Error in \(String(describing:object)): \(description)")
         } catch InfoError.invalidBirthday(let object, let description) {
-            print("Invalid birthday set in \(object): \(description)")
+            print("Invalid birthday set in \(String(describing:object)): \(description)")
         } catch {
             print("Uncaught error in pass.getAccesspriveleges()")
         }
@@ -164,7 +169,9 @@ class RideAccessKiosk: Kiosk {
 }
 
 class VendorStallKiosk: Kiosk {
-        
+    
+    let description = "VendorStallKiosk"
+    
     var discountBeingAuthorized: Discount
         
     init(for discountBeingAuthorized: Discount, with pass: Pass) {
@@ -187,10 +194,13 @@ class VendorStallKiosk: Kiosk {
                     continue
                 }
             }
+            
+            printBirthdayMessage()
+            
         }  catch InfoError.missingInformation(let object, let description) {
-            print("Error in \(object): \(description)")
+            print("Error in \(String(describing:object)): \(description)")
         } catch InfoError.invalidBirthday(let object, let description) {
-            print("Invalid birthday set in \(object): \(description)")
+            print("Invalid birthday set in \(String(describing:object)): \(description)")
         } catch {
             print("Uncaught error in pass.getAccesspriveleges()")
         }

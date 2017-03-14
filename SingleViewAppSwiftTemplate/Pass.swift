@@ -9,10 +9,12 @@
 import Foundation
 
 struct Pass {
-    let entrant: EntrantType
-    let personalInfo: EntrantInfo?
+    let description = "Pass"
     
-    init(entrant: EntrantType, personalInfo: EntrantInfo?) {
+    let entrant: EntrantType
+    let personalInfo: EntrantInfo
+    
+    init(entrant: EntrantType, personalInfo: EntrantInfo) {
         self.entrant = entrant
         self.personalInfo = personalInfo
     }
@@ -24,43 +26,43 @@ struct Pass {
         // MARK: Entrant Information Error Handeling
         switch entrant {
         case .employee:
-            guard personalInfo?.firstName != nil else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a First Name.")
+            guard personalInfo.firstName != nil else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a First Name.")
             }
             
-            guard personalInfo?.lastName != nil else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a Last Name.")
+            guard personalInfo.lastName != nil else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a Last Name.")
             }
             
-            guard personalInfo?.streetAddress != nil else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a valid street address.")
+            guard personalInfo.streetAddress != nil else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a valid street address.")
             }
             
-            guard personalInfo?.city != nil else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a valid U.S. city.")
+            guard personalInfo.city != nil else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a valid U.S. city.")
             }
             
-            guard personalInfo?.state != nil else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a valid U.S. state.")
+            guard personalInfo.state != nil else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a valid U.S. state.")
             }
             
-            guard personalInfo?.zipcode != nil, personalInfo?.zipcode?.characters.count == 5, Int.init((personalInfo?.zipcode)!) != nil  else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a valid U.S. zipcode.")
+            guard personalInfo.zipcode != nil, personalInfo.zipcode?.characters.count == 5, Int.init(personalInfo.zipcode!) != nil  else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a valid U.S. zipcode.")
             }
             
         case .guest(.child):
             
             let earliestValidBirthday =  Calendar.current.date(byAdding: .year, value: -5, to: Date())!
             
-            guard personalInfo?.birthdayDate != nil else {
-                throw InfoError.missingInformation(inObject: personalInfo, description: "Please provide a valid birthday.")
+            guard personalInfo.birthdayDate != nil else {
+                throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a valid birthday.")
             }
-            guard (personalInfo?.birthdayDate)! > Date() else {
-                throw InfoError.invalidBirthday(inObject: personalInfo, description: "Appearently, this individual has not been born yet.")
+            guard (personalInfo.birthdayDate)! > Date() else {
+                throw InfoError.invalidBirthday(inObject: personalInfo.description, description: "Appearently, this individual has not been born yet.")
             }
             
-            guard (personalInfo?.birthdayDate)! >= earliestValidBirthday else {
-                throw InfoError.invalidBirthday(inObject: personalInfo, description: "This individual is too old to be entered as a Free Child.")
+            guard (personalInfo.birthdayDate)! >= earliestValidBirthday else {
+                throw InfoError.invalidBirthday(inObject: personalInfo.description, description: "This individual is too old to be entered as a Free Child.")
             }
             
         default:

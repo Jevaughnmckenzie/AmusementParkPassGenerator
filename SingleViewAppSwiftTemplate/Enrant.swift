@@ -29,6 +29,8 @@ enum EmployeeType {
 
 
 struct EntrantInfo {
+    let description = "EntrantInfo"
+    
     var firstName: String?
     var lastName: String?
     
@@ -54,7 +56,11 @@ struct EntrantInfo {
         self.zipcode = zipcode
         
         birthdayFormated.dateFormat = "MM/dd/yyyy"
-        birthdayDate = birthdayFormated.date(from: birthday!)
+        
+        if birthday != nil {
+            birthdayDate = birthdayFormated.date(from: birthday!)
+        }
+        
     }
     
     
