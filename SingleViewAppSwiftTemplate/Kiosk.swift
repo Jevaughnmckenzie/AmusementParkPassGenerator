@@ -69,9 +69,11 @@ class Kiosk: Swipeable {
     }
     
     func printBirthdayMessage() {
-        if let birthdayComparison: ComparisonResult? = calendar.compare((pass.personalInfo.birthdayDate)!, to: Date(), toGranularity: .day) {
-            if birthdayComparison == .orderedSame {
-            print("Happy Birthday!")
+        if let  birthdayDate = pass.personalInfo.birthdayDate {
+            
+            
+            if  calendar.compare(birthdayDate, to: Date(), toGranularity: .day) == .orderedSame {
+                    print("Happy Birthday!")
             }
         }
     }

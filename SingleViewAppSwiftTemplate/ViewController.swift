@@ -48,14 +48,14 @@ class ViewController: UIViewController {
 //        discountTest2.doubleSwipeCheck()
 //        areaAccessTest2.doubleSwipeCheck()
 //        
-//        let guest3 = EntrantType.guest(.child)
-//        let guest3PersonalInfo = EntrantInfo(firstName: nil, lastName: nil, birthday: "03/28/1995", streetAddress: nil, city: nil, state: nil, zipcode: nil)
-//        let guest3Pass = Pass(entrant: guest3, personalInfo: guest3PersonalInfo)
-//        let discountTest3 = VendorStallKiosk(for: .merchandi se, with: guest3Pass)
-//        let areaAccessTest3 = AreaAccessKiosk(for: .amusement, with: guest3Pass)
-//        
-//        discountTest3.doubleSwipeCheck()
-//        areaAccessTest3.doubleSwipeCheck()
+        let guest3 = EntrantType.guest(.child)
+        let guest3PersonalInfo = EntrantInfo(firstName: nil, lastName: nil, birthday: "03/14/2015", streetAddress: nil, city: nil, state: nil, zipcode: nil)
+        let guest3Pass = Pass(entrant: guest3, personalInfo: guest3PersonalInfo)
+        let discountTest3 = VendorStallKiosk(for: .merchandise, with: guest3Pass)
+        let areaAccessTest3 = AreaAccessKiosk(for: .amusement, with: guest3Pass)
+        
+        discountTest3.doubleSwipeCheck()
+        areaAccessTest3.doubleSwipeCheck()
         
 //        let employee1 = EntrantType.employee(.manager)
 //        let employee1PersonalInfo = EntrantInfo(firstName: "Eric", lastName: "Wong", birthday: nil, streetAddress: "81", city: "Malverne", state: "NY", zipcode: "#4")
@@ -66,19 +66,26 @@ class ViewController: UIViewController {
 //        areaAccessTest4.doubleSwipeCheck()
 //        discountTest4.doubleSwipeCheck()
         
-        let employee2 = EntrantType.employee(.foodService)
-        let employee2PersonalInfo = EntrantInfo(firstName: "Tank", lastName: nil, birthday: nil, streetAddress: "32 Water St.", city: "Lauderhill", state: "FL", zipcode: "11454")
-        let employee2Pass = Pass(entrant: employee2, personalInfo: employee2PersonalInfo)
-        let areaAccessTest5 = AreaAccessKiosk(for: .kitchen, with: employee2Pass)
-        let discountTest5 = VendorStallKiosk(for: .food, with: employee2Pass)
+//        let employee2 = EntrantType.employee(.foodService)
+//        let employee2PersonalInfo = EntrantInfo(firstName: "Tank", lastName: nil, birthday: nil, streetAddress: "32 Water St.", city: "Lauderhill", state: "FL", zipcode: "11454")
+//        let employee2Pass = Pass(entrant: employee2, personalInfo: employee2PersonalInfo)
+//        let areaAccessTest5 = AreaAccessKiosk(for: .kitchen, with: employee2Pass)
+//        let discountTest5 = VendorStallKiosk(for: .food, with: employee2Pass)
+//        
+//       
+//        areaAccessTest5.doubleSwipeCheck()
+//        discountTest5.doubleSwipeCheck()
         
-       
-        areaAccessTest5.doubleSwipeCheck()
-        discountTest5.doubleSwipeCheck()
-        
-        
-        // Error checking
-        
+//        let employee3 = EntrantType.employee(.maintenance)
+//        let employee3PersonalInfo = EntrantInfo(firstName: "Jordan", lastName: "Morris", birthday: nil, streetAddress: "81 Linden St.", city: "Malverne", state: "NY", zipcode: "11565")
+//        let employee3Pass = Pass(entrant: employee3, personalInfo: employee3PersonalInfo)
+//        let areaAccessTest6 = AreaAccessKiosk(for: .maintenance, with: employee3Pass)
+//        let rideAccessTest6 = RideAccessKiosk(for: .allRides, with: employee3Pass)
+//        let discountTest6 = VendorStallKiosk(for: .food, with: employee3Pass)
+//        
+//        areaAccessTest6.doubleSwipeCheck()
+//        rideAccessTest6.doubleSwipeCheck()
+//        discountTest6.doubleSwipeCheck()
 
     }
     

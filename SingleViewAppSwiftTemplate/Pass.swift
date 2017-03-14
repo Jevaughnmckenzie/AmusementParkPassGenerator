@@ -57,7 +57,7 @@ struct Pass {
             guard personalInfo.birthdayDate != nil else {
                 throw InfoError.missingInformation(inObject: personalInfo.description, description: "Please provide a valid birthday.")
             }
-            guard (personalInfo.birthdayDate)! > Date() else {
+            guard (personalInfo.birthdayDate)! < Date() else {
                 throw InfoError.invalidBirthday(inObject: personalInfo.description, description: "Appearently, this individual has not been born yet.")
             }
             
@@ -69,7 +69,6 @@ struct Pass {
             break
         }
         
-        // MARK:
         switch entrant {
             
         case .guest(let guestType) :
