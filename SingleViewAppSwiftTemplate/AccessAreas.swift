@@ -16,36 +16,28 @@ enum AreaAccess {
 }
 
 enum RideAccess {
-    case allRidesAccess
-    case skipPrivilage
+    case noRides
+    case allRides
+}
+
+enum RidePriority {
+    case standard
+    case skipPrivilege
 }
 
 enum Discount {
-    case food(Int)
-    case merchendise(Int)
+    case food
+    case merchandise
+}
+
+enum AccessPermission {
+    case areaAccess(AreaAccess)
+    case rideAccess(RideAccess)
+    case ridePriority(RidePriority)
+    case discountAccess(Discount, Int)
 }
 
 
-protocol AreaAccessible {
-    var canEnterAmusementAreas: Bool { get set }
-    var canEnterKitchenAreas: Bool { get set }
-    var canEnterRideControlAreas: Bool { get set }
-    var canEnterMaintenanceAreas: Bool { get set }
-    var canEnterOfficeArea: Bool { get set }
-    
-    func checkIfIndividual(_: Bool)
-}
-
-
-protocol RideAccessible {
-    var canAccessAllRides: Bool { get set }
-    var canSkipRideLines: Bool { get set }
-    
-}
-
-protocol AccessCheckable: AreaAccessible, RideAccessible {
-    
-}
 
 
 

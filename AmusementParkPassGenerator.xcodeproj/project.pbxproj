@@ -14,11 +14,11 @@
 		3A8AADD31DF9B85E00A2B931 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */; };
 		3A8AADDE1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADDD1DF9B85E00A2B931 /* SingleViewAppSwiftTemplateTests.swift */; };
 		3A8AADE91DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */; };
-		A836C2CB1E6B9E2B00A9180A /* FullAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836C2CA1E6B9E2B00A9180A /* FullAddress.swift */; };
-		A836C2CD1E6BA4C100A9180A /* Swipe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836C2CC1E6BA4C100A9180A /* Swipe.swift */; };
-		A836C2CF1E6CE61900A9180A /* AccessAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A836C2CE1E6CE61900A9180A /* AccessAreas.swift */; };
-		A84B7AC31E69F9AC009CB2BD /* Entrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B7AC21E69F9AC009CB2BD /* Entrant.swift */; };
-		A84B7AC61E6A7A41009CB2BD /* InfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A84B7AC51E6A7A41009CB2BD /* InfoError.swift */; };
+		A8409A321E7842DA0019DEAB /* Kiosk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A311E7842DA0019DEAB /* Kiosk.swift */; };
+		A8409A341E7842F00019DEAB /* Pass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A331E7842F00019DEAB /* Pass.swift */; };
+		A8409A361E7843080019DEAB /* Enrant.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A351E7843080019DEAB /* Enrant.swift */; };
+		A8409A381E78431D0019DEAB /* AccessAreas.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A371E78431D0019DEAB /* AccessAreas.swift */; };
+		A8409A3A1E78437E0019DEAB /* InfoError.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8409A391E78437E0019DEAB /* InfoError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,11 +52,11 @@
 		3A8AADE41DF9B85E00A2B931 /* AmusementParkPassGeneratorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmusementParkPassGeneratorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A8AADE81DF9B85E00A2B931 /* SingleViewAppSwiftTemplateUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleViewAppSwiftTemplateUITests.swift; sourceTree = "<group>"; };
 		3A8AADEA1DF9B85E00A2B931 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A836C2CA1E6B9E2B00A9180A /* FullAddress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullAddress.swift; sourceTree = "<group>"; };
-		A836C2CC1E6BA4C100A9180A /* Swipe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Swipe.swift; sourceTree = "<group>"; };
-		A836C2CE1E6CE61900A9180A /* AccessAreas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessAreas.swift; sourceTree = "<group>"; };
-		A84B7AC21E69F9AC009CB2BD /* Entrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entrant.swift; sourceTree = "<group>"; };
-		A84B7AC51E6A7A41009CB2BD /* InfoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoError.swift; sourceTree = "<group>"; };
+		A8409A311E7842DA0019DEAB /* Kiosk.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Kiosk.swift; sourceTree = "<group>"; };
+		A8409A331E7842F00019DEAB /* Pass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pass.swift; sourceTree = "<group>"; };
+		A8409A351E7843080019DEAB /* Enrant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enrant.swift; sourceTree = "<group>"; };
+		A8409A371E78431D0019DEAB /* AccessAreas.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessAreas.swift; sourceTree = "<group>"; };
+		A8409A391E78437E0019DEAB /* InfoError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,11 +113,11 @@
 				3A8AADCF1DF9B85E00A2B931 /* Assets.xcassets */,
 				3A8AADD11DF9B85E00A2B931 /* LaunchScreen.storyboard */,
 				3A8AADD41DF9B85E00A2B931 /* Info.plist */,
-				A84B7AC21E69F9AC009CB2BD /* Entrant.swift */,
-				A84B7AC51E6A7A41009CB2BD /* InfoError.swift */,
-				A836C2CA1E6B9E2B00A9180A /* FullAddress.swift */,
-				A836C2CC1E6BA4C100A9180A /* Swipe.swift */,
-				A836C2CE1E6CE61900A9180A /* AccessAreas.swift */,
+				A8409A351E7843080019DEAB /* Enrant.swift */,
+				A8409A391E78437E0019DEAB /* InfoError.swift */,
+				A8409A371E78431D0019DEAB /* AccessAreas.swift */,
+				A8409A311E7842DA0019DEAB /* Kiosk.swift */,
+				A8409A331E7842F00019DEAB /* Pass.swift */,
 			);
 			path = SingleViewAppSwiftTemplate;
 			sourceTree = "<group>";
@@ -274,13 +274,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A836C2CD1E6BA4C100A9180A /* Swipe.swift in Sources */,
-				A836C2CF1E6CE61900A9180A /* AccessAreas.swift in Sources */,
-				A84B7AC61E6A7A41009CB2BD /* InfoError.swift in Sources */,
-				A836C2CB1E6B9E2B00A9180A /* FullAddress.swift in Sources */,
+				A8409A361E7843080019DEAB /* Enrant.swift in Sources */,
+				A8409A3A1E78437E0019DEAB /* InfoError.swift in Sources */,
+				A8409A381E78431D0019DEAB /* AccessAreas.swift in Sources */,
 				3A8AADCB1DF9B85E00A2B931 /* ViewController.swift in Sources */,
-				A84B7AC31E69F9AC009CB2BD /* Entrant.swift in Sources */,
+				A8409A341E7842F00019DEAB /* Pass.swift in Sources */,
 				3A8AADC91DF9B85E00A2B931 /* AppDelegate.swift in Sources */,
+				A8409A321E7842DA0019DEAB /* Kiosk.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

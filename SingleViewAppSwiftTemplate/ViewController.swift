@@ -10,37 +10,45 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var timestamps: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
-        let isAuthorized = AuthorizationSwipe(entrant: <#T##EntrantType#>)
-        
-        let worker = FoodServiceWorker(firstName: "Jevaughn",
-                                       lastName: "McKenzie",
-                                       fullAddress: FullAddress(streetAddress: "81 Linden St.",
-                                                                city: "Malverne",
-                                                                state: "NY",
-                                                                zipcode: "11565"))
-        
-        let entrant = EntrantType.employee(EmployeeType.foodService(worker))
-        
-        let name = entrant.firstName
-        
+    
     }
-
+    
+        
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
-            
+    @IBAction func addTimeStamp() {
+                }
         
         
         
-        
-        
-        
-    }
+//        guard timestampHistory != nil else {
+//            return print("no")
+//        }
 }
+        
+        
+        
+        
+        
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
 

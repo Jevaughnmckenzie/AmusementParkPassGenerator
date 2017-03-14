@@ -10,10 +10,8 @@ import Foundation
 
 
 enum InfoError: Error {
-    case unauthorizedAccess(inObject: AnyObject , description: String)
-    case limitedRideAccess(inObject: AnyObject , description: String)
-    case missingInformation(inObject: AnyObject , description: String)
-    case invalidBirthday(inObject: AnyObject, description: String)
+    case missingInformation(inObject: Any, description: String)
+    case invalidBirthday(inObject: Any, description: String)
 }
 
 
