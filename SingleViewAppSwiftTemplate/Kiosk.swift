@@ -41,7 +41,7 @@ class Kiosk: Swipeable {
         timeStampHistory.append(timestamp)
         
         // convert elements of timestampHistory back into dates and compare them
-        timestampFormatter.dateFormat = "hh:mm Z"
+        timestampFormatter.dateFormat = "hh:mm:ss a."
         
         // Does not check for doubleswipe if there is not two timestamps in the timeStampHistory array
         if timeStampHistory.count < 2 {
@@ -53,15 +53,13 @@ class Kiosk: Swipeable {
         
             let currentTimeStampIndex = timeStampHistory.count - 1
             let currentTimeStamp = timeStampHistory[currentTimeStampIndex]
-            
+        
             if let currentSwipe = timestampFormatter.date(from: currentTimeStamp),
-            let lastSwipe = timestampFormatter.date(from: previousTimeStamp) {
-            
-            let nextAbilityToSwipe = lastSwipe.addingTimeInterval(5)
-            if currentSwipe >= nextAbilityToSwipe {
-                swipe()
-            } else {
-                    //FIXME: Add an alert message with a more descriptice message
+                let lastSwipe = timestampFormatter.date(from: previousTimeStamp) {
+                let nextAbilityToSwipe = lastSwipe.addingTimeInterval(5)
+                if currentSwipe > nextAbilityToSwipe {
+                    swipe()
+                } else {
                     print("Please try again later")
                 }
             }
@@ -70,9 +68,11 @@ class Kiosk: Swipeable {
     
     func printBirthdayMessage() {
         if let  birthdayDate = pass.personalInfo.birthdayDate {
+            let birthdayDateComponents = calendar.dateComponents([.year, .month, .day], from: birthdayDate)
+            let currentDayComponents = calendar.dateComponents([.year, .month, .day], from: Date())
             
-            
-            if  calendar.compare(birthdayDate, to: Date(), toGranularity: .day) == .orderedSame {
+            if  birthdayDateComponents.month == currentDayComponents.month
+                && birthdayDateComponents.day == currentDayComponents.day {
                     print("Happy Birthday!")
             }
         }
@@ -197,7 +197,10 @@ class VendorStallKiosk: Kiosk {
                 }
             }
             
-            printBirthdayMessage()
+            if catagoricalPermissions == 0 {
+                print("No discount")
+            }
+            printBirthdayMessage() 
             
         }  catch InfoError.missingInformation(let object, let description) {
             print("Error in \(String(describing:object)): \(description)")
@@ -207,10 +210,7 @@ class VendorStallKiosk: Kiosk {
             print("Uncaught error in pass.getAccesspriveleges()")
         }
             
-        if catagoricalPermissions == 0 {
-            print("No discount")
         }
-    }
 }
 
 
