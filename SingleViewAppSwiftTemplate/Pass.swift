@@ -69,6 +69,8 @@ struct Pass {
             break
         }
         
+        
+        // Places enum representations of all permissions granted to an entrant type into an array of permissions
         switch entrant {
             
         case .guest(let guestType) :

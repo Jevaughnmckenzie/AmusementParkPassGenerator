@@ -11,9 +11,12 @@ import Foundation
 protocol Swipeable {
     var pass: Pass { get }
     func swipe() // depending on the kiosk, it returns a string after determining privileges
-    func doubleSwipeCheck()
+    func doubleSwipeCheck() // prevents a swipe from occuring twice when called on a particular instance
 }
 
+
+// This is the main class of kiosk that is never actually called.
+// The subclasses are always ustilized instead
 class Kiosk: Swipeable {
     
     let pass: Pass
